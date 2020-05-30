@@ -1,0 +1,42 @@
+<html>
+    <head>
+
+    </head>
+    <body>
+
+    </body>
+    <script>
+        //Arrow function
+        //The use of arrow function as given below
+        //1.They have shorter syntax than function expression
+        //2.They have explicit return statement
+        //3.They retain scope of the method declared in when used as inner functions
+        const fruits = ['Apple','Kiwi','Banana','Orange'];
+        console.log(fruits.map(fruit=>fruit.length));
+
+        //With One argument
+        //1.
+        const favFruit = (fruit)=>(`My Fruit is ${fruit}`);
+        console.log(favFruit('Apple'));
+        //2.
+        const favFruit2 =fruit=>(`My Fruit is ${fruit}`);
+        console.log(favFruit2('Kiwi'));
+        //3.
+        const favFruit3 =fruit=>`My Fruit is ${fruit}`;
+        console.log(favFruit3('Kiwi'));
+        //4.
+        const favFruit4 =fruit=>{return `My Fruit is ${fruit}`};
+        console.log(favFruit4('Watermelon'));
+
+        const favFruit5 =(fruit)=>{return `My Fruit is ${fruit}`};
+        console.log(favFruit5('Grapes'));
+
+
+        //2.With Multiple argument
+        const favFruit6 = (fruit1,fruit2)=>{return `My Fruit is ${fruit1},${fruit2}`};
+        console.log(favFruit6('Apple','Grapes'));
+
+        const favFruit7 = (fruit1,fruit2)=>(`My Fruit is ${fruit1} ${fruit2}`);
+        console.log(favFruit7('Apple','Pomgranet'));
+    </script>
+</html>

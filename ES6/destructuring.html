@@ -1,0 +1,33 @@
+<html>
+
+<head>
+    <title>
+        destructuring
+    </title>
+</head>
+
+<body>
+
+</body>
+<script>
+    //De-structuring mechanism is built to allow extracting multiple properties from object, elements from array, data from map/set, etc into distinct variables via patterns
+    let person = {
+        name: 'Maya',
+        age: 30,
+        phone: '123',
+        address: {
+            zipcode: 1234,
+            street: 'rainbow',
+            number: 42
+        }
+    }
+    let { name, age, phone,address:{zipcode,street,number} } = person;
+    console.log(person.name);
+    console.log(person.age);
+    console.log(person.phone);
+    console.log(person.address.zipcode);
+    console.log(person.address.street);
+    console.log(person.address.number);
+</script>
+
+</html>

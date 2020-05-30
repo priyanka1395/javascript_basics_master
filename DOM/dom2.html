@@ -1,0 +1,46 @@
+<html>
+    <head>
+    <style>
+        #container{
+            width : 500px;
+            height : 500px;
+            position : relative;
+            background: green;
+        }
+        #ball{
+            width : 50px;
+            height : 50px;
+            position:  absolute;
+            background: red;
+        }
+       </style>
+       </head>
+        
+       <body>
+          <button onclick="play()">Play It</button><hr/>
+         <div id="container">
+       <div id="ball"></div>
+       <hr/>
+         </div>
+       </body>
+       <script>
+         function play(){
+             var elem = document.getElementById("ball");
+             var pos = 0;
+             setInterval(function(){
+                 pos=pos+5;
+                 if(pos==400){
+                     pos=0;
+                     elem.style.background = "red";
+                 }
+                 if(pos==100){
+                     elem.style.background= "yellow";;
+                 }
+               elem.style.top = pos +"px";//10px
+               elem.style.left = pos+'px';
+             },20)
+         }
+         
+       </script>
+       
+</html>

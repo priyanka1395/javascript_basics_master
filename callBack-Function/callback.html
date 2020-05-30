@@ -1,0 +1,36 @@
+<html>
+    <head>
+        <title>My First CallBack Function</title>
+    </head>
+    <body>
+
+    </body>
+    <script>
+        // A callback function is a function can pass to another fuction(which may be arrow function or Annonymous function) as a argument.
+        //Types of Callback fucntion
+        //1.Syncronous Callback function
+        //Syncronous means it will excute one by one waiting for other excution.
+        function show(){
+            console.log('Inside the show function')
+        }  
+        function show1(callback){
+            callback();
+        }
+        show1(show);
+        console.log('End the excution');
+
+        //In Es6
+        const geeky=(callback)=>{
+            var a = 101;
+            callback(a);
+        }
+        geeky(a=>console.log('show'  + a));
+
+        //2.Asyncronous Callback function
+        //Asyncronous means it will be wait for anybody, if it is dealy happen it can excute next statement from event queue
+        setTimeout(function(){
+            console.log('I will excute after 5 sec')
+        },5000);
+        console.log('outside the callback function')
+    </script>
+</html>

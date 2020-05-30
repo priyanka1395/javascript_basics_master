@@ -1,0 +1,28 @@
+<html>
+    <head>
+        <title>
+            Bind Method
+        </title>
+    </head>
+    <body>
+
+    </body>
+    <script>
+        //Returns a new function, allowing you to pass in an array and any number of arguments
+        var emp = {
+            fname:'Rohan',
+            lname:'Kumar'
+        }
+        var emp2 ={
+            fname:'Rahul',
+            lname:'Rao'
+        }
+        function invite(g1,g2){
+            console.log(g1 + " " + this.fname + " " + this.lname + " " + g2)
+        }
+        var invite1  = invite.bind(emp);
+        invite1('Hello','How are you');
+        var invite2 = invite.bind(emp2);
+        invite2('Hello','How are you');
+    </script>
+</html>

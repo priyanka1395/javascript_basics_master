@@ -1,0 +1,28 @@
+<html>
+    <head>
+        <title>Symbol data type</title>
+    </head>
+    <body>
+
+    </body>
+    <script>
+        //Symbols 
+        //Symbol is primitive data type for unique key with primitive data type. We can't use new keyword it with.
+        const sym1 = Symbol('my identifier');
+        const sym2 = Symbol('my identifier');
+        console.log(sym1===sym2);//false
+         const a = Symbol('hello');
+         const b = Symbol('hello');
+         console.log(a===b);//true
+
+         const k1 = Symbol('for k1');
+         const k2 =Symbol('for k2');
+         myObj = {};
+         myObj[k1] ='Rohan';
+         myObj[k2] = 'Sohan'
+         console.log(myObj[k2])
+         //You can't use console.log(myObj.k2)
+         //Symbols are ignore in for in loop,JSON.stringify,
+
+    </script>
+</html>

@@ -1,0 +1,20 @@
+<html>
+    <head>
+    <style>
+       </style>
+       </head>
+        
+       <body>
+          <input value="" id="id2" onchange="myInputChange()"/>
+       </body>
+       <script>
+         function myInputChange(){
+               var t2 = document.getElementById('id2');
+               console.log(t2);
+               t2.style.background = 'green';
+               t2.style.color = 'white';
+               t2.value = t2.value.toUpperCase();
+           }
+       </script>
+       
+</html>

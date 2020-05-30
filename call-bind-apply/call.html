@@ -1,0 +1,26 @@
+<html>
+    <head>
+        <title>Call in Javascript</title>
+    </head>
+    <body>
+
+    </body>
+    <script>
+        //The call() method invokes a function with a given this value and arguments provided one by one.
+        //Note- In call method argument values are separeted by comma
+        var emp = {
+            fname:'Rohan',
+            lname:'Kumar'
+        }
+        var emp1 ={
+            fname:'Soham',
+            lname:'Rao'
+        }
+        function invite(greeting1,greeting2){
+            console.log(greeting1 + ' ' + this.fname + ' ' + this.lname + ' ' + greeting2)
+        }
+        invite.call(emp,'Hello','how are you!!');
+        invite.call(emp1,'Hello','how are you!!');
+
+    </script>
+</html>

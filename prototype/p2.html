@@ -1,0 +1,26 @@
+<html>
+    <head>
+        <title>My Prototype</title>
+    </head>  
+    <body>
+
+    </body>
+    <script>
+       const car = function(car,model,dateManufactured){
+           this.car = car;
+           this.model = model;
+           this.dateManufactured = dateManufactured
+       }
+       car.prototype.getModel = function(){
+           return this.model
+       }
+       car.prototype.getCarDate =function(){
+        return `The car is ${this.car} and it's manufactured date is ${this.dateManufactured}`
+       }
+       let firstCar = new car('Ballano','GT',1990);
+       console.log(firstCar);
+       console.log(firstCar.getCarDate());
+       console.log(firstCar.getModel());
+       
+    </script>
+</html>

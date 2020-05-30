@@ -1,0 +1,38 @@
+<html>
+    <head>
+
+    </head>
+    <!-- <p id="id1">Hello I am Paragraph</p>
+    <p id="id2">Hello I am Paragraph</p>
+    <p id="id3">Hello I am Paragraph</p>
+    <p id="id4">Hello I am Paragraph</p> -->
+    <p class="myClass">Hello</p>
+    <button onclick="myChange()">Change Me!!</button>
+    <script>
+        function myChange(){
+            var a = document.querySelectorAll('p.myClass');
+            console.log(a);
+            for(var i = 0;i<a.length;i++){
+                a[i].style.color = 'green';
+                a[i].style.background = 'red';
+                a[i].style.fontSize = '60px';
+            }
+            // var t = document.getElementById('id1');
+            // console.log(t);
+            // t.innerHTML ='I am new paragraph';
+            // t.style.color = 'green';
+            // t.style.fontSize='30px';
+            // t.style.fontFamily='monospace';
+            // t.style.backgroundColor='black';
+            // var t1 = document.getElementsByTagName('p');
+            // console.log(t1);
+            // for(var i=0;i<t1.length;i++){
+            //     console.log(t1[i]);
+            //     t1[i].style.color = 'red';
+            //     t1[i].style.backgroundColor = 'black';
+            //     t1[i].style.fontFamily = 'monospace'
+            //     t1[i].innerHTML = t1[i].innerHTML + 'Neww!!!!!'
+            // }
+        }
+    </script>
+</html>

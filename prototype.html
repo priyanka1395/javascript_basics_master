@@ -1,0 +1,23 @@
+<html>
+<head>
+
+</head>
+<script>
+var Mobile = function(model){
+	//Instance member
+	this.model = model;
+	this.price = 3000
+}
+var samsung = new Mobile('Galaxy');
+var mi = new Mobile('Note 7');
+//If I want the color property in both of two object i.e in samsung as well as mi so will use Prototype
+//Prototype Member
+
+//ClassName.prototype.key = 'value'
+Mobile.prototype.color = 'red';
+console.log(samsung);
+console.log(mi);
+</script>
+</html>
+
+

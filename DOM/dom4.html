@@ -1,0 +1,52 @@
+<html>
+
+<head>
+</head>
+
+<body id="b1">
+    <p id="id1">We are Indian</p>
+    <button onclick="myEvent()">Change</button>
+    <p class="c1">class 1</p>
+    <p class="c2">Class 2</p>
+    <p class="c1">class 3</p>
+    <p class="c1">class 4</p>
+    <p class="c2">class 5</p>
+    <button onclick="changeClass()">Change Multiple Class</button>
+
+    <img  id= "im1" src="https://cdn.the-scientist.com/assets/articleNo/66820/aImg/34883/bird-article-l.png" height="300" width="300"/>
+    <button onclick="changeBird()">Bird Change</button>
+</body>
+<script>
+    var b1 = document.getElementById('b1');
+    console.log(b1.childNodes);
+    function myEvent() {
+        var ele = document.getElementById('id1');
+        ele.innerHTML = 'Changed Paragraph with DOM';
+        ele.style.color = 'blue';
+        ele.style.fontSize = '30px';
+        ele.style.fontFamily = 'monospace'
+    }
+    function changeClass() {
+        // var t = document.getElementsByClassName('c1');
+        // console.log(t);
+        // for (var i = 0; i < t.length; i++) {
+        //     t[1].style.color = 'yellow';
+        //     t[1].style.fontSize = '40px';
+        // }
+        var t2 = document.querySelectorAll('p.c2');
+        var t3 = document.querySelectorAll('p.c1');
+        var resT = [...t2,...t3];
+        console.log(resT)
+        for(var i =0;i<t2.length;i++){
+            t2[i].style.color = 'red' 
+        }
+    }
+    function changeBird(){
+        var i1 = document.getElementById('im1');
+         i1.src = 'https://cdn.the-scientist.com/assets/articleNo/66820/aImg/34883/bird-article-l.png';
+         i1.hight = '500px';
+         i1.width = '500px';
+    }
+</script>
+
+</html>

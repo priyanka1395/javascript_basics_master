@@ -1,0 +1,25 @@
+<html>
+<head>
+
+</head>
+<script>
+function add(a,b,c=10){
+	return a+b+c
+}
+console.log(add(4,5));
+
+function test(a,b,c=null){
+console.log(a);
+console.log(b);
+console.log(c)
+}
+test(10,20)
+
+function arrDefault(b,a = [234,'Default']){
+	console.log(b);
+	console.log(a);
+}
+arrDefault(20);
+
+</script>
+</html>

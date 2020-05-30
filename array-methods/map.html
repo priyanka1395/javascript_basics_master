@@ -1,0 +1,22 @@
+<html>
+    <head>
+        <title>Array Methods</title>
+    </head>
+    <body>
+
+    </body>
+    <script>
+        //With Array
+        const array = [1, 2, 3, 4, 10]
+        const resArr = array.map(ele=>ele *5);
+        console.log(resArr);
+
+        //with array of object
+        const fruit = [
+            {name:'Kiwi',cost:90},
+            {name:'Mango',cost:80}
+        ]
+        var result = fruit.map(f => ({key: f.name, value: f.cost }));
+        console.log(result);
+    </script>
+</html>

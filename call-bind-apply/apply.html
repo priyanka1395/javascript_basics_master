@@ -1,0 +1,25 @@
+<html>
+    <head>
+        <title>Apply Method</title>
+    </head>
+    <body>
+
+    </body>
+    <script>
+        //Invokes the function and allows you to pass in arguments as an array
+        //Note- In The apply method values are separeted by arrays
+        var emp = {
+            fname :'John',
+            lname:'Doe'
+        }
+        var emp2 = {
+            fname:'Matt',
+            lname:'Prior'
+        }
+        function invite(g1,g2){
+            console.log(g1 + " " + this.fname + " " + this.lname + " "+ g2);
+        }
+        invite.apply(emp,['Hello','How are you']);
+        invite.apply(emp2,['Hello','How are you']);
+    </script>
+</html>

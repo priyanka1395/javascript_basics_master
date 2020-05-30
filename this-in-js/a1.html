@@ -1,0 +1,18 @@
+<html>
+    <head>
+        <title>This</title>
+    </head>
+    <body>
+
+    </body>
+    <script>
+        //this refers to the owner of the function. If function is called in reference to any object then this refers to object otherwise it refers to window object
+
+        function show(){
+            console.log("The a is " + this.a);
+            console.log("The b is " + this.b);
+        }
+        show()
+        //Here a and b will be undefined because the window will not find the value of a and b
+    </script>
+</html>

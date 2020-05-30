@@ -1,0 +1,35 @@
+<html>
+    <head>
+        
+    </head>
+    <body></body>
+    <script>
+        //Here we are discussing about the Async/Await
+        //Async and await for the extension  of promise
+        //Note- If you declare your function with async it will return promise
+        //Await can be use only with async function.
+
+        //Remember the following point work with async/await
+        //1.It will return promise
+        //2.Means it will execute asyncronously
+        //3.Where it will find it will find word await it will wait and execute the other process and then come back to that process again
+        async function show(){
+            console.log('inside async function');
+            const resposne = await fetch('https://api.github.com/users');
+            console.log('before resolved');
+            const users  = await resposne.json();
+            //response.json() will return promise
+            console.log('resolved promise');
+            return users;
+
+            return 'Hello async'
+        }
+        console.log('before calling');
+        let res = show();
+        console.log('after calling');
+        console.log(res);
+        //Here res is also promise
+        res.then(data=>console.log(data))
+        console.log('last line calling')
+    </script>
+</html>

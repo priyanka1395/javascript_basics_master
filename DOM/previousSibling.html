@@ -1,0 +1,16 @@
+<html>
+    <head>
+
+    </head>
+    <body id="pd">
+        <h1>Parent Node</h1>
+        <p>We are learning about the parent node</p>
+        <input type="text" id="in">
+    </body>
+    <script>
+        var t  = document.getElementById('in');
+        console.log(t.previousSibling);
+        //Output will be text node
+        //Here it will consider the white space and comment also if black space there return text node
+    </script>
+</html>

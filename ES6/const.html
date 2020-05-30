@@ -1,0 +1,26 @@
+<html>
+    <head>
+    </head>
+    <body>
+
+    </body>
+    <script>
+         function showName() {
+        const fruitName = 'Oranges';
+        //The above fruitName have scope between the function
+        {
+            const fruitName1 = 'Apple'
+            console.log(fruitName1);
+            //The above fruitName have scope between block{}
+        }
+        console.log(fruitName)
+    }
+    const fruitName = 'Kiwi';
+    console.log(fruitName);
+    showName();
+
+    const person ={};
+    person.age =34;
+    console.log(person.age)
+    </script>
+</html>

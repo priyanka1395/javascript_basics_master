@@ -1,0 +1,25 @@
+<html>
+    <head>
+        <title>
+            Filter Method
+        </title>
+    </head>
+    <body>
+
+    </body>
+    <script>
+        // With the array
+        const arr = [4,90,25,192];
+        const resArr = arr.filter(f=>f>=50);
+        console.log(resArr);
+        //With the array of obejcts
+        const fruit = [
+            {name:'Apple',cost:90},
+            {name:'PineApple',cost:45},
+            {name:'Orange',cost:34},
+            {name:'Kiwi',cost:90}
+        ]
+        const resarr = fruit.filter(f=>f.cost>34);
+        console.log(resarr);
+    </script>
+</html>

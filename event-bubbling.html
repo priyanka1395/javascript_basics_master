@@ -1,0 +1,23 @@
+<html>
+    <head>
+        <title>Event Bubbling</title>
+    </head>
+    <body>
+        <div id="parent">
+            <button id="child" onclick="event.stopPropagation()">Child</button>
+        </div>
+    </body>
+    <script>
+        //Event Bubbling is the event starts from the deepest element or target element to its parents, then all its ancestors which are on the way to bottom to top. At present, all the modern browsers have event bubbling as the default way of event flow
+        var parent = document.querySelector('#parent');
+        
+        parent.addEventListener('click',function(){
+            console.log('parent click');
+        })
+
+        var child = document.querySelector('#child');
+        child.addEventListener('click',function(){
+            console.log('child click')
+        })
+    </script>
+</html>

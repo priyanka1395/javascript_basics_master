@@ -1,0 +1,29 @@
+<html>
+    <head>
+        <title>
+            Closure in javascript
+        </title>
+    </head>
+    <body></body>
+    <script>
+        //Closure is function inside function and inside function can access parent function variable;
+        //Uses of Closure-->Object Data Privacy
+        //We can describe the closure in three following point
+        //1.Inner function can access it's local varibale
+        //2.Inner function can access parent function variable
+        //3.Inner function can acess also the global variable
+
+        var sp1 = function(){
+            var runs = 0;
+            function sp2(){
+                runs =runs +6
+                return runs
+            }
+            return sp2();
+        } 
+        console.log(sp1());
+        console.log(sp1());
+        console.log(sp1());
+
+    </script>
+</html>

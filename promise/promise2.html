@@ -1,0 +1,42 @@
+<html>
+    <head>
+        <title>
+            First promise
+        </title>
+    </head>
+    <body>
+        <h1>Check Console I am creating First Promise</h1>
+    </body>
+    <script>
+        //For handle the promise we can use .then() and .catch() method.
+        //1.promise in ES5
+
+        var isBrotherHappy = true;
+        //Note if above varible is true then it will go to resolve state, otherwise reject state
+        var willGetNewPhone = new Promise(function(resolve,reject){
+            if(isBrotherHappy){
+                var phone = {
+                    phone:'Nokia 6',
+                    color:'red'
+                }
+                resolve(phone)
+            }
+            else{
+                var reason = new Error('He is not Happy')
+                reject(reason)
+            }
+             //For handle the promise we can use .then() and .catch() method.
+             //Note if it's in resolved state then it will be execute .then method and if it is rejected state it will be come to catch().
+        })
+        //Here we are consuming the promise
+        var askBrother = function(){
+           willGetNewPhone.then(function(res){
+               console.log('The Response is' ,res)
+           })
+           .catch(function(err){
+               console.log('The Error is', err)
+           })
+        }
+        askBrother();
+    </script>
+</html>

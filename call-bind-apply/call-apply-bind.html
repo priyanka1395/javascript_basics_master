@@ -1,0 +1,82 @@
+<html>
+
+<head>
+    <title></title>
+</head>
+
+<body></body>
+<script>
+    let emp = {//object literal
+        firstName: "Mohan",
+        lastName: "Kumar",
+        getCompleteName: function () {//method
+            console.log("The name is " + this.firstName + " " + this.lastName);
+        }
+    }
+
+    //Question : this operator inside the getCompleteName function refers to whom
+    //Ans : this refers to the emp object
+    emp.getCompleteName();
+    //The name is Mohan kumar
+    //Output : The name is Mohan Kumar
+
+    // getCompleteName(); : Here this will search function inside the browser object
+
+    //I have made this common function
+    function getCompleteName2() {//function + present inside the browser object
+        console.log("The name is " + this.firstName + " " + this.lastName);
+    }
+
+    /*
+1. getCompleteName2() : Preset inside the browser object
+2. this refers to whom ?
+Ans : this will point towards the browser object
+3. Output will be what when we call it.
+Ans : The name is undefined undefined
+Why ?
+The reason is that this refers to browser object. And there it is searching for firstName and lalstName.
+But we have not created any global variable with name firstName and lastName
+ 
+Question ?
+Suppose getCompleteName2() we want to call for the emp object. we want this operator inside 
+function to point towards the emp object 
+    */
+
+    //getCompleteName2()
+    getCompleteName2.call(emp);
+    //getCompleteName2 gets called in context with emp object
+    //now this operator inside the getCompleteName2() is pointing towards the emp onject
+
+
+    //Passing the argument to the call function
+    function getCompleteName3(city, state) {//function + present inside the browser object
+        console.log("The name is " + this.firstName + " " + this.lastName + ", City is " + city, ", State is " + state);
+        //firstName , lastName is referring towards the object and city is taken from argumnet passed
+    }
+    getCompleteName3("Bangalore", "Karnataka");
+    //Output : The name is undefined undefined, City is Bangalore
+    getCompleteName3.call(emp, "Bangalore", "Karnataka");
+    //Output : The name is Mohan Kumar, City is Bangalore
+
+    getCompleteName3.call(emp, ["Bangalore", "Karnataka"]);
+    //Output : The name is Mohan Kumar, City is Bangalore,Karnataka , State is undefined
+
+    //Solution 
+    //apply method
+    //when we are passing argument as an array then use apply method
+    getCompleteName3.apply(emp, ["Bangalore", "Karnataka"]);
+    //apply method splitting the bangalore and karnataka into city and state argumnet
+    //Output : The name is Mohan Kumar, City is Bangalore , State is Karnataka
+
+    //bind : This function is used to bind the function in context with object. And returns the ref
+
+    var funRef = getCompleteName3.bind(emp, "Bangalore", "Karnataka");
+    //Here in above program it is unly binding
+    //The name is Mohan Kumar, City is Bangalore , State is Karnataka
+    funRef();
+    funRef()
+
+
+</script>
+
+</html>

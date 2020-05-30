@@ -1,0 +1,23 @@
+<html>
+    <head>
+        <title>Final use of closure</title>
+    </head>
+    <body>
+
+    </body>
+    <script>
+        var x = (function (){
+            var runs = 0;
+            return function(){
+                runs = runs +6;
+                return runs
+            }
+        })()
+        console.log("X =" + x());
+        console.log("X =" + x());
+        console.log("X =" + x());
+        console.log("X = " + x());
+        console.log("X =" + x());
+        console.log("X =" + x());
+    </script>
+</html>

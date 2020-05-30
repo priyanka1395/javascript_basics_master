@@ -1,0 +1,20 @@
+<html>
+    <head>
+        <title>
+            IIFE(Immediatly Invoked Function Expression)
+        </title>
+    </head>
+    <body>
+
+    </body>
+    <script>
+        //IIFE is use for the data privacy of a variable. If you define the varible inside the iife it can't be access outside the world
+
+        (function(){
+            var x = 2
+            console.log('The Value of x is '+ x);
+        })();
+        console.log('The Value of x is '+ x);//Here it will be a error because it's outside
+
+    </script>
+</html>

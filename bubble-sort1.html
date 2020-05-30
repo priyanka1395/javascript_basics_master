@@ -1,0 +1,27 @@
+<html>
+
+<head>
+
+<body>
+
+</body>
+</head>
+<script>
+    function bubbleSort(arr) {
+        let len = arr.length;
+        for (let i = 0; i < len; i++) {
+            for (let j = 0; j < len; j++) {
+                if (arr[j] > arr[j + 1]) {
+                    let temp = arr[j];
+                    arr[j] = arr[j + 1];
+                    arr[j + 1] = temp;
+                }
+            }
+        }
+        return arr
+    }
+    console.log(bubbleSort([90, 3, -8, 5, 10]));
+    console.log(bubbleSort([90,1167,1159,4400,4900]));
+</script>
+
+</html>

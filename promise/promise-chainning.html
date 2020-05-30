@@ -1,0 +1,49 @@
+<html>
+
+<head>
+    <title>Promise Chain</title>
+</head>
+
+<body>
+
+</body>
+<script>
+    //Promise Channing
+    //Promise with another promise we can use promise chainning
+
+    var isBrotherHappy = true;
+    var willGetNewPhone = new Promise(function (resolve, reject) {
+        setTimeout(function () {
+            if (isBrotherHappy) {
+                var phone = {
+                    phone: 'Nokia 6',
+                    color: 'red'
+                }
+                resolve(phone)
+            }
+            else {
+                var reason = new Error('He is not Happy')
+                reject(reason)
+            }
+            //For handle the promise we can use .then() and .catch() method.
+            //Note if it's in resolved state then it will be execute .then method and if it is rejected state it will be come to catch().
+        }, 5000)
+    })
+    var showOff = function (phone) {
+        return new Promise(function (resolve, reject) {
+            var message = "Hey I have the phone with brand" + phone.brand + " " + phone.color
+        })
+        resolve(message)
+    }
+    var askBrother = function () {
+        willGetNewPhone.then(showOff).then(function (fullfiled) {
+            console.log(fullfiled)
+        })
+            .catch(function (err) {
+                console.log(err)
+            })
+    }
+    askBrother();
+</script>
+
+</html>

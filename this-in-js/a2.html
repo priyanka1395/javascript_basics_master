@@ -1,0 +1,23 @@
+<html>
+
+<head>
+    <title>
+        This1
+    </title>
+</head>
+
+<body>
+
+</body>
+<script>
+    //Here the scope of a and b will be global because it is defined outside the function
+    var a = 10;
+    var b = 20;
+    function show1() {
+        console.log('The Value of a is ' + this.a);
+        console.log('The Value of b is ' + this.b);
+    }
+    show1();
+</script>
+
+</html>

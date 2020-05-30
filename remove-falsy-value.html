@@ -1,0 +1,20 @@
+<html>
+    <head>
+        <title>Remove falsy values</title>
+    </head>
+    <body>
+
+    </body>
+    <script>
+        function removeFalsy(arr){
+            for(let i=0;i<arr.length;i++){
+                if(arr[i]==''|| arr[i]==undefined ||arr[i]==false || arr[i]==0 ||Number.isNaN(arr) || arr[i]=== null){
+                    arr.splice(i,1);
+                    i--
+                }
+            }
+            return arr;
+        }
+        console.log(removeFalsy([false,9,34,null,undefined,0,89,'',89,0,undefined]));
+    </script>
+</html>

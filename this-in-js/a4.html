@@ -1,0 +1,16 @@
+<html>
+    <head>
+        <title>Function Constructor</title>
+    </head>
+    <body></body>
+    <script>
+        //When person called  with new operator it act as constructor function
+        var person = function(name,age,salary){
+            this.name = name;
+            this.age = age;
+            this.salary = salary;
+        }
+        var perName = new person('Rohan',34,400);
+        console.log(perName);
+    </script>
+</html>

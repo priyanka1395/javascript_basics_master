@@ -1,0 +1,34 @@
+<html>
+    <head>
+        <title>Remove the duplicates</title>
+    </head>
+    <body></body>
+    <script>
+        //1.Using Filter Method
+        var fruit= ['Apple','Kiwi','Orange','Kiwi','Apple','Watermelon','Kiwi','Apple'];
+        function removeDuplicates(data){
+        return data.filter((value,index)=>data.indexOf(value)===index)
+        }
+        console.log(removeDuplicates(fruit));
+
+        //2.Using set
+
+        function removeDuplicatesWithset(data){
+            return [...new Set(data)];
+        }
+        console.log(removeDuplicatesWithset(fruit));
+
+        //3.Using forEach
+
+        function removeDuplicateswithForEach(data){
+            let unique = [];
+            data.forEach(element => {
+                if(!unique.includes(element)){
+                    unique.push(element)
+                }
+            });
+            return unique;
+        }
+        console.log(removeDuplicateswithForEach(fruit));
+    </script>
+</html>

@@ -1,0 +1,25 @@
+<html>
+    <head>
+        <title>Template Litral</title>
+    </head>
+    <body>
+    </body>
+    <script>
+        //In ES5
+        var person ={
+            name:'Mohan',
+            age:34,
+            sal:3000
+        }
+        console.log('The name of person is ' + person.name + ', ' + 'age is ' + person.age +' ' + 'and salary is '+ person.sal);
+
+        //In ES6
+        let emp = {
+            name:'Rohan',
+            age:18,
+            sal:200
+        }
+        //Please note here we are using the backticks(``) symbol with template literals
+        console.log(`The name of person ${emp.name} age is ${emp.age} and salary is ${emp.sal}`);
+    </script>
+</html>
